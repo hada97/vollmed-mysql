@@ -10,5 +10,6 @@ public class ApiApplication {
 		SpringApplication.run(ApiApplication.class, args);
 		System.out.println("--------------------");
 		System.out.println("Programa finalizado");
+		System.out.println("--------------------");
 	}
 }
