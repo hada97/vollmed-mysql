@@ -10,6 +10,7 @@ public class SigninController {
 
     @GetMapping("/hello")
     public String hello(){
-        return "hello";
+        System.out.println("Hello");
+        return "";
     }
 }
