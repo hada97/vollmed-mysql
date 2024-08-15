@@ -8,9 +8,6 @@ Enquanto um time de desenvolvimento será responsável pelo aplicativo mobile, o
  CRUD de médicos;
  CRUD de pacientes;
 
-📄 Documentação
-A documentação das funcionalidades da aplicação pode ser acessada neste link: [Trello](https://trello.com/b/O0lGCsKb/api-voll-med)
-
 🛠 Tecnologias
 As seguintes tecnologias foram utilizadas no desenvolvimento da API Rest do projeto:
 
