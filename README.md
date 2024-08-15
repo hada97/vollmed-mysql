@@ -23,5 +23,4 @@ Flyway
 Lombok
 
 📝 Licença
-Projeto desenvolvido por Alura e utilizado nos cursos de Spring Boot.
-
+Projeto desenvolvido no curso de Java e Spring Boot na escola Alura.
