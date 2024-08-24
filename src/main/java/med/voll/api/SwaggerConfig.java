@@ -14,7 +14,7 @@ public class SwaggerConfig {
                 .info(new Info()
                         .title( "API do Ada em Produção")
                         .version("v1")
-                        .description("API Rest desenvolvida no curso da escola Alura")
+                        .description("API Rest desenvolvida no curso da Alura")
                 );
     }
 }

@@ -3,6 +3,7 @@ package med.voll.api.infra.security;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
@@ -13,25 +14,44 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.csrf.CsrfTokenRepository;
+import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
+
 
     @Configuration
     @EnableWebSecurity
     public class SecurityConfigurations {
 
-    @Autowired
-    private SecurityFilter securityFilter;
+        @Bean
+        public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+            http
+                    .csrf(csrf -> csrf
+                            .csrfTokenRepository(csrfTokenRepository())
+                            .ignoringRequestMatchers("/login")
+                    )
+                    .sessionManagement(session -> session
+                            .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                    )
+                    .authorizeHttpRequests(authz -> authz
+                            .requestMatchers(HttpMethod.POST, "/login").permitAll()
+                            .requestMatchers("/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**").permitAll()
+                            .anyRequest().authenticated()
+                    )
+                    .addFilterBefore(securityFilter(), UsernamePasswordAuthenticationFilter.class);
 
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-            return http.csrf().disable()
-                    .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                    .and().authorizeRequests()
-                    .antMatchers(HttpMethod.POST,"/login").permitAll()
-                    .antMatchers("/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**").permitAll()
-                    .anyRequest().authenticated()
-                    .and().addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
-                    .build();
-    }
+            return http.build();
+        }
+
+        @Bean
+        public CsrfTokenRepository csrfTokenRepository() {
+            return new HttpSessionCsrfTokenRepository();
+        }
+
+        @Bean
+        public SecurityFilter securityFilter() {
+            // Definição do seu SecurityFilter
+            return new SecurityFilter();
+        }
 
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
