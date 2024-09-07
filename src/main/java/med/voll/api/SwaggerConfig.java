@@ -17,7 +17,7 @@ public class SwaggerConfig {
                         .title( "API Vollmed em Produção")
                         .version("v1")
                         .description("API Rest desenvolvida por A. Guimaraes" +
-                                "LOGIN OBRIGATORIO")
+                                " *LOGIN OBRIGATORIO*")
                 );
     }
 }
