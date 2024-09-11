@@ -1,0 +1,20 @@
+# Ignorar o diretório de build do Maven
+target/
+
+# Ignorar arquivos de configuração do Maven
+*.iml
+.idea/
+
+# Ignorar arquivos de configuração do Eclipse
+.project
+.classpath
+
+# Ignorar arquivos de controle de versão
+.git/
+.gitignore
+
+# Ignorar arquivos temporários e de sistema
+*.log
+*.tmp
+*.swp
+.DS_Store
