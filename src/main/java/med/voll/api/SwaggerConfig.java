@@ -14,10 +14,10 @@ public class SwaggerConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title( "API Vollmed em Produção")
+                        .title( "API Vollmed")
                         .version("v1")
-                        .description("API Rest desenvolvida por A. Guimaraes" +
-                                " *LOGIN OBRIGATORIO*")
+                        .description("API Rest desenvolvida em Spring + java 17\n\n"+
+                        "**Login Obrigatorio**")
                 );
     }
 }

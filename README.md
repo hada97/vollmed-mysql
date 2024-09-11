@@ -1,8 +1,7 @@
-# API RESTful para Voll.med
+# API Rest para Clínica Medica
 
 ## 💻 Sobre o Projeto
 
-**Voll.med** é uma clínica médica fictícia que requer um aplicativo para a gestão de consultas. Este aplicativo possui funcionalidades para o cadastro de médicos e pacientes, bem como para o agendamento e cancelamento de consultas.
 
 ## ⚙️ Funcionalidades
 
