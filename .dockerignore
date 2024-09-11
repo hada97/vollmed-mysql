@@ -1,6 +1,3 @@
-# Ignorar o diretório de build do Maven
-target/
-
 # Ignorar arquivos de configuração do Maven
 *.iml
 .idea/
