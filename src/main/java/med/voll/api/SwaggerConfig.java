@@ -16,8 +16,13 @@ public class SwaggerConfig {
                 .info(new Info()
                         .title( "API Vollmed")
                         .version("v1")
-                        .description("API Rest desenvolvida em Spring + java 17\n\n"+
-                        "**Login Obrigatorio**")
+                        .description("Spring + java 17 + MySql\n\n"+
+                        "**Login Obrigatório**\n\n"+
+                                        "{\n\n" +
+                                        "    \"login\": \"admin@voll.med\",\n" +
+                                        "    \"senha\": \"admin\"\n\n" +
+                                        "}"
+                                )
                 );
     }
 }
