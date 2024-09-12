@@ -16,13 +16,15 @@ public class SwaggerConfig {
                 .info(new Info()
                         .title( "API Vollmed")
                         .version("v1")
-                        .description("Spring + java 17 + MySql\n\n"+
+                        .description("Spring + MySql + AWS\n\n"+
                         "**Login Obrigatório**\n\n"+
                                         "{\n\n" +
                                         "    \"login\": \"admin@voll.med\",\n" +
                                         "    \"senha\": \"admin\"\n\n" +
-                                        "}"
+                                        "}\n\n"+
+                                        "Repositório: [GitHub](https://github.com/hada97/spring-boot-api-rest)\n\n"
                                 )
                 );
     }
 }
+
