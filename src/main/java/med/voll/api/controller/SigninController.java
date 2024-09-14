@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class SigninController {
 
-    @GetMapping("/hello")
+    @GetMapping("/")
     public void hello(){
-        System.out.println("Hello");
+        System.out.println("Bem vindo a API");
         return;
     }
 }
