@@ -2,6 +2,7 @@
 
 ## 💻 Sobre o Projeto
 
+[Veja como ficou em Produção!](https://api-vollmed-v1.onrender.com/swagger-ui/index.html#/autenticacao-controller/efetuarLogin)
 
 ## ⚙️ Funcionalidades
 
@@ -22,6 +23,8 @@ A API REST do projeto foi desenvolvida utilizando as seguintes tecnologias:
 - **Insomnia**: Ferramenta para testar APIs.
 - **Swagger**: Ferramenta para definir, criar, documentar e consumir APIs REST.
 - **IntelliJ IDEA**: Editor de código.
+- **Docker**:  Plataforma que facilita a criação, distribuição e execução de aplicativos em contêineres.
+- **AWS App Runner**: AWS App Runner é um serviço gerenciado da Amazon que facilita a implantação e o gerenciamento de aplicativos web e APIs.
 
 ## 📝 Licença
 

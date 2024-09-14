@@ -1,6 +1,5 @@
 package med.voll.api.infra.springdoc;
 
-
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
