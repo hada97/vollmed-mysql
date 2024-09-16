@@ -2,7 +2,7 @@
 
 ## 💻 Sobre o Projeto
 
-[Veja como ficou em Produção!](https://vollmed-latest.onrender.com/swagger-ui/index.html)
+[Veja como ficou em Produção!](http://54.159.124.62:8080/swagger-ui/index.html)
 
 ## ⚙️ Funcionalidades
 
