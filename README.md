@@ -36,12 +36,12 @@ Para começar a utilizar esta API, siga os passos abaixo:
 
 1. **Clone o repositório**:
     ```bash
-    git clone https://github.com/hada97/spring-boot-api-rest
+    git clone https://github.com/hada97/spring-boot-vollmed
     ```
 
 2. **Navegue até o diretório do projeto**:
     ```bash
-    cd spring-boot-api-rest
+    cd spring-boot-vollmed
     ```
 
 3. **Compile e execute o projeto**:
