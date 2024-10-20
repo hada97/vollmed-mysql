@@ -1,5 +1,3 @@
-alter table pacientes add column ativo tinyint;
+ALTER TABLE pacientes ADD COLUMN ativo boolean DEFAULT true;
 
-update pacientes set ativo = 1;
-
-alter table pacientes modify ativo tinyint not null;
+UPDATE pacientes SET ativo = true;  -- Isso já define o valor para todas as linhas existentes

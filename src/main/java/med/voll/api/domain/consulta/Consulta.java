@@ -31,5 +31,7 @@ public class Consulta {
 
     private LocalDateTime data;
 
+    public Consulta(Object o, Medico medico, Paciente paciente, LocalDateTime data, Object o1) {
+    }
 }
 

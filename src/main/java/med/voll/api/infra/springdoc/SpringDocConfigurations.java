@@ -21,10 +21,8 @@ public class SpringDocConfigurations {
                         .version("v1")
                         .description(
                                 "**Login Obrigatório**\n\n"+
-                                        "{\n\n" +
                                         "    \"login\": \"admin@voll.med\",\n" +
                                         "    \"senha\": \"admin\"\n\n" +
-                                        "}\n\n"+
                                         "[GitHub](https://github.com/hada97/spring-boot-api-rest)\n\n"
                         ));
     }

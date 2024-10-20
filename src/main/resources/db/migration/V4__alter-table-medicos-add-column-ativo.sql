@@ -1,3 +1,3 @@
-alter table medicos add ativo tinyint;
+ALTER TABLE medicos ADD COLUMN ativo boolean;
 
-update medicos set ativo = 1;
+UPDATE medicos SET ativo = true;
