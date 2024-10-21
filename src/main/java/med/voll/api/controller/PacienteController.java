@@ -41,6 +41,7 @@ public class PacienteController {
     public ResponseEntity atualizar(@RequestBody @Valid DadosAtualizacaoPaciente dados) {
         var paciente = repository.getReferenceById(dados.id());
         paciente.atualizarInformacoes(dados);
+
         return ResponseEntity.ok(new DadosDetalhamentoPaciente(paciente));
     }
 
@@ -49,6 +50,7 @@ public class PacienteController {
     public ResponseEntity excluir(@PathVariable Long id) {
         var paciente = repository.getReferenceById(id);
         paciente.excluir();
+
         return ResponseEntity.noContent().build();
     }
 
@@ -57,5 +59,6 @@ public class PacienteController {
         var paciente = repository.getReferenceById(id);
         return ResponseEntity.ok(new DadosDetalhamentoPaciente(paciente));
     }
+
 
 }

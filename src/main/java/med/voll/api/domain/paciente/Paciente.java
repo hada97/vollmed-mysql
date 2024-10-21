@@ -13,7 +13,6 @@ import med.voll.api.domain.endereco.Endereco;
 @AllArgsConstructor
 @Entity(name = "Paciente")
 @Table(name = "pacientes")
-
 public class Paciente {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

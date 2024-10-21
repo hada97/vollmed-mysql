@@ -25,10 +25,7 @@ import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
         @Bean
         public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
             http
-                    .csrf(csrf -> csrf
-                            .csrfTokenRepository(csrfTokenRepository())
-                            .ignoringRequestMatchers("/login")
-                    )
+                    .csrf(csrf -> csrf.disable())  // Desativa a proteção CSRF
                     .sessionManagement(session -> session
                             .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                     )
@@ -41,6 +38,7 @@ import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
 
             return http.build();
         }
+
 
         @Bean
         public CsrfTokenRepository csrfTokenRepository() {
