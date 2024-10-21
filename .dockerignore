@@ -15,3 +15,8 @@
 *.tmp
 *.swp
 .DS_Store
+
+target/*.log
+target/*.tmp
+target/out/
+target/**/dependency-reduced-pom.xml
