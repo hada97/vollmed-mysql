@@ -58,7 +58,7 @@ class MedicoControllerTest {
                 "Medico",
                 "medico@voll.med",
                 "61999999999",
-                "123456",
+                "654321",
                 Especialidade.CARDIOLOGIA,
                 dadosEndereco());
 
