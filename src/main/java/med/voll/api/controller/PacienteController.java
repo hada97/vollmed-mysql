@@ -48,9 +48,9 @@ public class PacienteController {
     }
 
     @CacheEvict(value = "pacientes", key = "#id")
-    @PutMapping
+    @PutMapping("/{id}")
     @Transactional
-    public ResponseEntity atualizar(@RequestBody @Valid DadosAtualizacaoPaciente dados) {
+    public ResponseEntity atualizar(@PathVariable Long id, @RequestBody @Valid DadosAtualizacaoPaciente dados) {
         var paciente = repository.getReferenceById(dados.id());
         paciente.atualizarInformacoes(dados);
 
