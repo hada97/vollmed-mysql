@@ -63,7 +63,6 @@ public class PacienteController {
     public ResponseEntity excluir(@PathVariable Long id) {
         var paciente = repository.getReferenceById(id);
         paciente.excluir();
-
         return ResponseEntity.noContent().build();
     }
 

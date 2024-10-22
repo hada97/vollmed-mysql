@@ -43,7 +43,7 @@ class MedicoRepositoryTest {
         //when ou act
         var medicoLivre = medicoRepository.escolherMedicoaleatoriodisponivel(Especialidade.CARDIOLOGIA, proximaSegundaAs10);
 
-        //then ou assert
+        //then ou assertz
         assertThat(medicoLivre).isNull();
     }
 
