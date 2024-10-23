@@ -36,7 +36,7 @@ public class PacienteController {
         return ResponseEntity.ok(new DadosDetalhamentoPaciente(paciente));
     }
 
-    @CacheEvict(value = "pacientes", key = "#id")
+
     @PostMapping
     @Transactional
     public ResponseEntity cadastrar(@RequestBody @Valid DadosCadastroPaciente dados, UriComponentsBuilder uriBuilder) {
@@ -47,13 +47,12 @@ public class PacienteController {
         return ResponseEntity.created(uri).body(new DadosDetalhamentoPaciente(paciente));
     }
 
-    @CacheEvict(value = "pacientes", key = "#id")
+
     @PutMapping("/{id}")
     @Transactional
     public ResponseEntity atualizar(@PathVariable Long id, @RequestBody @Valid DadosAtualizacaoPaciente dados) {
         var paciente = repository.getReferenceById(dados.id());
         paciente.atualizarInformacoes(dados);
-
         return ResponseEntity.ok(new DadosDetalhamentoPaciente(paciente));
     }
 
@@ -65,6 +64,5 @@ public class PacienteController {
         paciente.excluir();
         return ResponseEntity.noContent().build();
     }
-
 
 }

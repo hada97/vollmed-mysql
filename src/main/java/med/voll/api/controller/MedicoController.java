@@ -36,7 +36,6 @@ public class MedicoController {
         return ResponseEntity.ok(new DadosDetalhamentoMedico(medico));
     }
 
-    @CacheEvict(value = "medicos", key = "#id")
     @PostMapping
     @Transactional
     public ResponseEntity<DadosDetalhamentoMedico> cadastrar(@RequestBody @Valid DadosCadastroMedico dados, UriComponentsBuilder uriBuilder) {
@@ -46,7 +45,6 @@ public class MedicoController {
         return ResponseEntity.created(uri).body(new DadosDetalhamentoMedico(medico));
     }
 
-    @CacheEvict(value = "medicos", key = "#id")
     @PutMapping("/{id}")
     @Transactional
     public ResponseEntity<DadosDetalhamentoMedico> atualizar(@PathVariable Long id, @RequestBody @Valid DadosAtualizacaoMedico dados) {

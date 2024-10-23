@@ -28,9 +28,6 @@ public class ConsultaController {
         return ResponseEntity.ok(detalhes); // Retorna os detalhes agendados
     }
 
-
-
-
 }
 
 
