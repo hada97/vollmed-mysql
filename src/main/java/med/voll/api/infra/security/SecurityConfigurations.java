@@ -1,6 +1,5 @@
 package med.voll.api.infra.security;
 
-import med.voll.api.infra.security.SecurityFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -49,7 +48,6 @@ public class SecurityConfigurations {
         configuration.addAllowedOrigin("http://127.0.0.1:5500"); // URL do seu frontend
         configuration.addAllowedHeader("*");
         configuration.addAllowedMethod("*");
-
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;

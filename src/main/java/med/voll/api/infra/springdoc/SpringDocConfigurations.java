@@ -16,7 +16,7 @@ public class SpringDocConfigurations {
         return new OpenAPI()
                 .components(new Components()
                         .addSecuritySchemes("bearer-key", new SecurityScheme().type(SecurityScheme.Type.HTTP).scheme("bearer").bearerFormat("JWT")))
-                        .info(new Info()
+                .info(new Info()
                         .title( "API Vollmed")
                         .version("v1")
                         .description(

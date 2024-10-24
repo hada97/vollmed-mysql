@@ -57,7 +57,8 @@ class ConsultaControllerTest {
     void agendar_cenario2() throws Exception {
         var data = LocalDateTime.now().plusHours(1);
         var especialidade = Especialidade.CARDIOLOGIA;
-        var dadosDetalhamento = new DadosDetalhamentoConsulta(null, 2l, 2l, data);
+
+        var dadosDetalhamento = new DadosDetalhamentoConsulta(null, 2l, 5l, data);
         when(agendaDeConsultas.agendar(any())).thenReturn(dadosDetalhamento);
 
         var response = mvc
@@ -65,7 +66,7 @@ class ConsultaControllerTest {
                         post("/consultas")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(dadosAgendamentoConsultaJson.write(
-                                        new DadosAgendamentoConsulta(2l, 2l, data, especialidade)
+                                        new DadosAgendamentoConsulta(2l, 5l, data, especialidade)
                                 ).getJson())
                 )
                 .andReturn().getResponse();

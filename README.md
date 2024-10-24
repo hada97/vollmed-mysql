@@ -1,62 +1,50 @@
-# API Rest para Clínica Medica
+## 💻 Sobre o projeto
 
-## 💻 Sobre o Projeto
+Voll.med é uma clínica médica fictícia que precisa de um aplicativo para gestão de consultas. O aplicativo deve possuir funcionalidades que permitam o cadastro de médicos e de pacientes, e também o agendamento e cancelamento de consultas.
 
-[Veja como ficou em Produção!](http://54.159.124.62:8080/swagger-ui/index.html)
+Enquanto um time de desenvolvimento será responsável pelo aplicativo mobile, o nosso será responsável pelo desenvolvimento da API Rest desse projeto.
+
+---
 
 ## ⚙️ Funcionalidades
 
-A API oferece as seguintes funcionalidades:
-- **CRUD de Médicos**: Criação, leitura, atualização e exclusão de registros de médicos.
-- **CRUD de Pacientes**: Criação, leitura, atualização e exclusão de registros de pacientes.
+- [x] CRUD de médicos;
+- [x] CRUD de pacientes;
+- [x] Agendamento de consultas;
+- [x] Cancelamento de consultas.
 
-## 🛠 Tecnologias Utilizadas
+---
 
-A API REST do projeto foi desenvolvida utilizando as seguintes tecnologias:
-- **Java 17**: Linguagem de programação utilizada.
-- **Spring Boot 3**: Framework para desenvolvimento de aplicações Java.
-- **Maven**: Ferramenta de automação e gerenciamento de dependências.
-- **PostgreSQL**: Banco de dados relacional.
-- **Hibernate**: Framework de mapeamento objeto-relacional (ORM).
-- **Flyway**: Ferramenta para versionamento e migração de banco de dados.
-- **Lombok**: Biblioteca para reduzir o boilerplate no código Java.
-- **Insomnia**: Ferramenta para testar APIs.
-- **Swagger**: Ferramenta para definir, criar, documentar e consumir APIs REST.
-- **Docker**:  Plataforma que facilita a criação, distribuição e execução de aplicativos em contêineres.
+## 🎨 Layout
 
+O layout da aplicação mobile está disponível neste link: <a href="https://www.figma.com/file/N4CgpJqsg7gjbKuDmra3EV/Voll.med">Figma</a>
+
+---
+
+## 📄 Documentação
+
+A documentação das funcionalidades da aplicação pode ser acessada neste link: <a href="https://trello.com/b/O0lGCsKb/api-voll-med">Trello</a>
+
+---
+
+## 🛠 Tecnologias
+
+As seguintes tecnologias foram utilizadas no desenvolvimento da API Rest do projeto:
+
+- **[Java 17](https://www.oracle.com/java)**
+- **[Spring Boot 3](https://spring.io/projects/spring-boot)**
+- **[Maven](https://maven.apache.org)**
+- **[MySQL](https://www.mysql.com)**
+- **[Hibernate](https://hibernate.org)**
+- **[Flyway](https://flywaydb.org)**
+- **[Lombok](https://projectlombok.org)**
+
+---
 
 ## 📝 Licença
 
-Este projeto foi desenvolvido sob licenca MIT.
+Projeto desenvolvido por [Alura](https://www.alura.com.br) e utilizado nos cursos de Spring Boot.
 
-## 🚀 Como Começar
+Instrutor: [Rodrigo Ferreira](https://cursos.alura.com.br/user/rodrigo-ferreira) 
 
-Para começar a utilizar esta API, siga os passos abaixo:
-
-1. **Clone o repositório**:
-    ```bash
-    git clone https://github.com/hada97/spring-boot-vollmed
-    ```
-
-2. **Navegue até o diretório do projeto**:
-    ```bash
-    cd spring-boot-vollmed
-    ```
-
-3. **Compile e execute o projeto**:
-    ```bash
-    mvn clean install
-
-    ```
-
-4. **Acesse a API**: Após iniciar o projeto, a API estará disponível na URL padrão:
-   ```bash
-    http://localhost:8080
-   
-    ```
-
-5. **Acesse o Swagger**: 
-   ```bash
-    http://localhost:8080/swagger-ui/index.html
-
-    ```
+---
