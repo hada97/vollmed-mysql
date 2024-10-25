@@ -6,6 +6,7 @@ import med.voll.api.domain.consulta.validacoes.cancelamento.ValidadorCancelament
 import med.voll.api.domain.medico.Medico;
 import med.voll.api.domain.medico.MedicoRepository;
 import med.voll.api.domain.paciente.PacienteRepository;
+import org.springframework.aot.nativex.FileNativeConfigurationWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -46,7 +47,7 @@ public class AgendaDeConsultas {
             throw new ValidacaoException("Não existe médico disponível nessa data!");
         }
 
-        var consulta = new Consulta(null, medico, paciente, dados.data(), null);
+        var consulta = new Consulta(null, medico, paciente, dados.data(), null, true);
         consultaRepository.save(consulta);
 
         return new DadosDetalhamentoConsulta(consulta);

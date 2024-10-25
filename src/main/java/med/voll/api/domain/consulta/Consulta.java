@@ -7,8 +7,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import med.voll.api.domain.medico.Medico;
 import med.voll.api.domain.paciente.Paciente;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
+
 
 @Table(name = "consultas")
 @Entity(name = "Consulta")
@@ -36,8 +38,14 @@ public class Consulta {
     @Enumerated(EnumType.STRING)
     private MotivoCancelamento motivoCancelamento;
 
+    private boolean ativo = true;
+
+    public Consulta(Object o, Medico medico, Paciente paciente, LocalDateTime data, Object o1) {
+    }
+
     public void cancelar(MotivoCancelamento motivo) {
         this.motivoCancelamento = motivo;
+        this.ativo = false;
     }
 
 }
