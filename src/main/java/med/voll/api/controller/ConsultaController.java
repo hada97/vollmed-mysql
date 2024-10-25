@@ -35,10 +35,18 @@ public class ConsultaController {
         return ResponseEntity.ok(dto);
     }
 
-    @DeleteMapping("/{id}")
-    @Transactional
+    @PutMapping("/{id}")
     public ResponseEntity cancelar(@PathVariable Long id, @RequestBody @Valid DadosCancelamentoConsulta dados) {
         agenda.cancelar(dados);
+        return ResponseEntity.noContent().build();
+    }
+
+
+    @DeleteMapping("/{id}")
+    @Transactional
+    public ResponseEntity excluir(@PathVariable Long id) {
+        var consulta = repository.getReferenceById(id);
+        consulta.excluir();
         return ResponseEntity.noContent().build();
     }
 

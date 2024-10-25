@@ -43,9 +43,12 @@ public class Consulta {
     public Consulta(Object o, Medico medico, Paciente paciente, LocalDateTime data, Object o1) {
     }
 
-    public void cancelar(MotivoCancelamento motivo) {
+    public void desmarcar(MotivoCancelamento motivo) {
         this.motivoCancelamento = motivo;
         this.ativo = false;
     }
 
+    public void excluir() {
+        this.ativo = false;
+    }
 }

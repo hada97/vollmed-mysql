@@ -55,13 +55,14 @@ public class AgendaDeConsultas {
 
     public void cancelar(DadosCancelamentoConsulta dados) {
         if (!consultaRepository.existsById(dados.idConsulta())) {
-            throw new ValidacaoException("Id da consulta informado não existe!");
-        }
-
+            throw new ValidacaoException("Id da consulta informado não existe!");}
         validadoresCancelamento.forEach(v -> v.validar(dados));
-
         var consulta = consultaRepository.getReferenceById(dados.idConsulta());
-        consulta.cancelar(dados.motivo());
+        try {
+            consulta.desmarcar(MotivoCancelamento.valueOf(String.valueOf(dados.motivo())));
+        } catch (IllegalArgumentException e) {
+            throw new ValidacaoException("Motivo de cancelamento inválido: " + dados.motivo());
+        }
     }
 
 
