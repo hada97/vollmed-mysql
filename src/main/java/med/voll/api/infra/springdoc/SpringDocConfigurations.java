@@ -23,7 +23,7 @@ public class SpringDocConfigurations {
                                 "**Login Obrigatório**\n\n"+
                                         "    login: \"admin@voll.med\"\n" +
                                         "    senha: \"admin\"\n\n" +
-                                        "[GitHub](https://github.com/hada97/spring-boot-vollmed)\n\n"
+                                        "[GitHub](https://github.com/hada97/vollmed-mysql)\n\n"
                         ));
     }
 }
