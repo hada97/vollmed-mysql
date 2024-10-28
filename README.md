@@ -1,8 +1,8 @@
-# API Rest para Clínica Medica
+# API para Clínica Medica
 
 ## 💻 Sobre o Projeto
 
-[Veja como ficou em Produção!](https://vollmed.onrender.com/swagger-ui/index.html#/autenticacao-controller/efetuarLogin)
+[Veja como ficou em Produção!](https://voll-hcdsf0cjf9bnb9ck.canadacentral-01.azurewebsites.net/swagger-ui/index.html)
 
 ## ⚙️ Funcionalidades
 
