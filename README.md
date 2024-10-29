@@ -23,6 +23,7 @@ A API REST do projeto foi desenvolvida utilizando as seguintes tecnologias:
 - **Insomnia**: Ferramenta para testar APIs.
 - **Swagger**: Ferramenta para definir, criar, documentar e consumir APIs REST.
 - **Docker**:  Plataforma que facilita a criação, distribuição e execução de aplicativos em contêineres.
+- **Azure**:  Plataforma de nuvem.
 
 
 ## 📝 Licença
@@ -35,12 +36,12 @@ Para começar a utilizar esta API, siga os passos abaixo:
 
 1. **Clone o repositório**:
     ```bash
-    git clone https://github.com/hada97/spring-boot-vollmed
+    git clone https://github.com/hada97/vollmed-mysql
     ```
 
 2. **Navegue até o diretório do projeto**:
     ```bash
-    cd spring-boot-vollmed
+    cd vollmed-mysql
     ```
 
 3. **Compile e execute o projeto**:
