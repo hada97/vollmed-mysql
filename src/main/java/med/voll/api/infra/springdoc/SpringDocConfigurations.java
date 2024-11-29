@@ -21,7 +21,7 @@ public class SpringDocConfigurations {
                         .version("v1")
                         .description(
                                 "**Login Obrigatório**\n\n"+
-                                        "    login: \"admin@voll.med\"\n" +
+                                        "    login: \"admin@\"\n" +
                                         "    senha: \"admin\"\n\n" +
                                         "[GitHub](https://github.com/hada97/vollmed-mysql)\n\n"
                         ));
